@@ -7,8 +7,30 @@
     <title>Espaço Equilibre</title>
 
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+
+
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> 
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src= "bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() 
+    {
+      // page is now ready, initialize the calendar...
+
+      $('#calendar').fullCalendar(
+      {
+        // put your options and callbacks here
+
+        dayClick: function() // callback example
+        {
+          alert('a day has been clicked!');
+        }        
+      })
+    });
+    </script>
 
   </head>
 
@@ -25,7 +47,7 @@
           <p> Mês </p>
         </div>
         <div class="col-sm-10">
-          <h2>Calendário</h2>
+          <div id='calendar'></div>
         </div>      
     </div>
   </body>
