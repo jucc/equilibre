@@ -1,0 +1,11 @@
+{
+  "name": "equilibre",
+  "version": "0.0.1",
+  "dependencies": 
+  {
+  	"jquery": "~2.2.0",
+  	"bootstrap": "~3.3.6",
+  	"fullcalendar": "~2.6.0"
+  },
+  "private": true
+}
