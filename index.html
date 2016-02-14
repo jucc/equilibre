@@ -4,21 +4,29 @@
     <title>Espaço Equilibre</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" media="screen">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" media="screen">
+
+    <link rel="stylesheet" href="css/custombootstrap.css" media="screen">
   </head>
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand text-muted" href="#"> Equilibre </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-muted" href="#"> espaço equilibre </a>
         <div class="collapse navbar-collapse">
           <ul class="nav  navbar-nav navbar-right">
-            <li class="active"> <a href="#">Salas</a></li>
+            <li> <a href="calendar.html">Salas</a></li>
             <li> <a href="#">Consultas</a></li>
             <li> <a href="#">Cadastros</a></li>
             <li> <a href="#">Gerenciamento</a></li>
+            <li class="active"> <a href="#">Login</a></li>
           </ul>
         </div>
       </div>
@@ -35,7 +43,6 @@
     </div>
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> 
-    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
   </body>

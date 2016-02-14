@@ -1,0 +1,7 @@
+body {
+	padding-top: 70px; /* doesn't fall behind the navbar */
+}
+
+.jumbotron {
+	text-align: center;
+}
