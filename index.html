@@ -4,13 +4,16 @@
     <title>Espaço Equilibre</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" media="screen">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen">
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" media="screen"> -->
 
     <link rel="stylesheet" href="css/custombootstrap.css" media="screen">
   </head>
 
+  <div></div>
   <body>
+
+    <!-- NAVBAR -->
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -24,13 +27,21 @@
           <ul class="nav  navbar-nav navbar-right">
             <li> <a href="calendar.html">Salas</a></li>
             <li> <a href="#">Consultas</a></li>
-            <li> <a href="#">Cadastros</a></li>
+            <li class="dropdown"> 
+              <a data-toggle="dropdown" data-target="#">Cadastros<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profissionais</a></li>
+                <li><a href="#">Clientes</a></li>
+              </ul>
+            </li>
             <li> <a href="#">Gerenciamento</a></li>
             <li class="active"> <a href="#">Login</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- CONTENT -->
 
     <div class="container">
       <div class="jumbotron">
@@ -42,8 +53,10 @@
       </div>
     </div>
 
+    <!-- SCRIPTS -->
+
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> 
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 </html>
