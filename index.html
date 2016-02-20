@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" media="screen"> -->
 
     <link rel="stylesheet" href="css/custombootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/signin.css" media="screen">
   </head>
 
   <div></div>
@@ -25,7 +26,7 @@
         <a class="navbar-brand text-muted" href="#"> espaço equilibre </a>
         <div class="collapse navbar-collapse">
           <ul class="nav  navbar-nav navbar-right">
-            <li> <a href="calendar.html">Salas</a></li>
+            <li> <a href="rooms.html">Salas</a></li>
             <li> <a href="#">Consultas</a></li>
             <li class="dropdown"> 
               <a data-toggle="dropdown" data-target="#">Cadastros<b class="caret"></b></a>
@@ -46,7 +47,21 @@
     <div class="container">
       <div class="jumbotron">
         <img class="img-responsive" src="img/logo.png" />
-      </div>       
+      </div>
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading"> Login </h2>
+        <label for="inputEmail" class="sr-only"> Usu&aacute;rio </label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="usu&aacute;rio" required autofocus>
+        <label for="inputPassword" class="sr-only"> Senha </label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="senha" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembrar
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"> Entrar </button>
+      </form>
 
       <div>
         <p>&copy; 2016 Equilibre - by jucc </p>
