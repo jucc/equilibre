@@ -25,17 +25,17 @@
         <a class="navbar-brand text-muted" href="#"> espaço equilibre </a>
         <div class="collapse navbar-collapse">
           <ul class="nav  navbar-nav navbar-right">
-            <li class="active"> <a href="#">Salas</a></li>
-            <li> <a href="#">Consultas</a></li>
+            <li> <a href="rooms.html">Salas</a></li>
+            <li> <a href="appointments.html">Consultas</a></li>
             <li class="dropdown"> 
               <a data-toggle="dropdown" data-target="#">Cadastros<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Profissionais</a></li>
-                <li><a href="#">Clientes</a></li>
+                <li><a href="professionals.html">Profissionais</a></li>
+                <li><a href="patients.html">Pacientes</a></li>
               </ul>
             </li>
-            <li> <a href="#">Gerenciamento</a></li>
-            <li> <a href="index.html">Login</a></li>
+            <li> <a href="admin.html">Gerenciamento</a></li>
+            <li> <a href="index.html">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -45,12 +45,57 @@
 
     <div class="container">
 
-      <div class="row">
-        <div class="col-sm-12">
-          <div id='calendar'></div>
-        </div>
+      <div class="jumbotron">        
+        <h2> Clientes </h2>
       </div>  
 
+      <div class="row datatools">
+        <div class="col-xs-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="buscar" aria-describedby="search-button"> 
+            <span class="input-group-addon" id="search-button"> <a href="#"><b class="glyphicon glyphicon-search"> </b></a></span>
+          </div>  
+        </div>
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-2">
+          <a href="#"><b class="glyphicon glyphicon-plus"> </b></a>
+        </div>
+      </div>
+
+      <div class="table-responsive" >
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Telefone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ronald Biggs</td>
+              <td>ronald@espacoequilibre.com</td>
+              <td>5554242</td>
+            </tr>
+            <tr>
+              <td>Claudio Fontes</td>
+              <td>claudio@espacoequilibre.com</td>
+              <td>5551234</td>
+            </tr>
+            <tr>
+              <td>Adriana dos Santos</td>
+              <td>didi@espacoequilibre.com</td>
+              <td>5554321</td>
+            </tr>
+            <tr>
+              <td>Carol Carolina</td>
+              <td>didi@espacoequilibre.com</td>
+              <td>5554321</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div>
         <p>&copy; 2016 Equilibre - by jucc </p>
       </div>
