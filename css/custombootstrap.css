@@ -13,3 +13,7 @@ body {
 .datatools {
 	margin-bottom: 20px;
 }
+
+.datatools .add-button .glyphicon  {
+	font-size: 2em;
+}

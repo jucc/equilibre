@@ -46,7 +46,7 @@
     <div class="container">
 
       <div class="jumbotron">        
-        <h2> Clientes </h2>
+        <h2> Pacientes </h2>
       </div>  
 
       <div class="row datatools">
@@ -58,8 +58,10 @@
         </div>
         <div class="col-xs-4">
         </div>
-        <div class="col-xs-2">
-          <a href="#"><b class="glyphicon glyphicon-plus"> </b></a>
+        <div class="col-xs-2">      
+          <div class="add-button text-right">
+            <a href="#"><span class="glyphicon glyphicon-plus"> </b></a>
+          </div>
         </div>
       </div>
 
@@ -70,6 +72,7 @@
               <th>Nome</th>
               <th>Email</th>
               <th>Telefone</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -77,21 +80,53 @@
               <td>Ronald Biggs</td>
               <td>ronald@espacoequilibre.com</td>
               <td>5554242</td>
+              <td class="text-right">
+                <button class="btn btn-default btn-xs" aria-label="editar">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"> </span>
+                </button>
+                <button class="btn btn-default btn-xs" aria-label="remover">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Claudio Fontes</td>
-              <td>claudio@espacoequilibre.com</td>
+              <td>claudio@espacoequilibre.com</td>              
               <td>5551234</td>
+              <td class="text-right">
+                <button class="btn btn-default btn-xs" aria-label="editar">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"> </span>
+                </button>
+                <button class="btn btn-default btn-xs" aria-label="remover">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Adriana dos Santos</td>
               <td>didi@espacoequilibre.com</td>
               <td>5554321</td>
+              <td class="text-right">
+                <button class="btn btn-default btn-xs" aria-label="editar">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"> </span>
+                </button>
+                <button class="btn btn-default btn-xs" aria-label="remover">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Carol Carolina</td>
-              <td>didi@espacoequilibre.com</td>
+              <td>carol@espacoequilibre.com</td>
               <td>5554321</td>
+              <td class="text-right">
+                <button class="btn btn-default btn-xs" aria-label="editar">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"> </span>
+                </button>
+                <button class="btn btn-default btn-xs" aria-label="remover">
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
