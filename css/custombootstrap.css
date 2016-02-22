@@ -15,5 +15,9 @@ body {
 }
 
 .datatools .add-button .glyphicon  {
-	font-size: 2em;
+	font-size: 1.25em;
+}
+
+#crudform .form .col-xs-8 {
+	padding-left: 0px;
 }
