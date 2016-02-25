@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-   
+
    // configure tasks
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -26,14 +26,29 @@ module.exports = function(grunt) {
 				files: ['js/*.js'],
 				tasks: ['uglify:dev']
 			}
-		}
+		},
+
+    bake: {
+      includes: {
+        options: { },
+        files: {
+          "dist/admin.html": "admin.html",
+          "dist/appointments.html": "appointments.html",
+          "dist/index.html": "index.html",
+          "dist/patients.html": "patients.html",
+          "dist/professionals.html": "professionals.html",
+          "dist/rooms.html": "rooms.html",
+        }
+      },
+    }
 	});
 
 	// load plugins
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-bake' );
 
 	// register taks
-	grunt.registerTask('default', ['uglify:dev']); // most used task = just type grunt
-	grunt.registerTask('dist',    ['uglify:dist']);
+	grunt.registerTask('default', ['bake:includes', 'uglify:dev']); // most used task = just type grunt
+	grunt.registerTask('dist',    ['bake:includes', 'uglify:dist']);
 };
