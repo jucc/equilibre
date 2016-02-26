@@ -32,12 +32,12 @@ module.exports = function(grunt) {
       includes: {
         options: { },
         files: {
-          "dist/admin.html": "admin.html",
-          "dist/appointments.html": "appointments.html",
-          "dist/index.html": "index.html",
-          "dist/patients.html": "patients.html",
-          "dist/professionals.html": "professionals.html",
-          "dist/rooms.html": "rooms.html",
+          "dist/admin.html": "app/admin.html",
+          "dist/appointments.html": "app/appointments.html",
+          "dist/index.html": "app/index.html",
+          "dist/patients.html": "app/patients.html",
+          "dist/professionals.html": "app/professionals.html",
+          "dist/rooms.html": "app/rooms.html",
         }
       },
     }
