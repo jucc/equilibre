@@ -1,25 +1,44 @@
 module.exports = function(grunt) {
 
-   // configure tasks
+	// CONFIG TASKS
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		// TASK: UGLIFY --------------
+
 		uglify: {
-			dist: { 				// concatenate scripts and minify
-				src: 'js/*.js',
-				dest:'dist/js/script.min.js'
+			dist: { 				  // concatenate all scripts and minify them
+				src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/*.js'],
+				dest: 'dist/js/scripts.min.js'
 			},
 			dev: {
-				options: {			// concatenate scripts and make them readable
+				options: {			// concatenate all scripts but keep them readable
 					beautify: true,
 					mangle: false,
 					compress: false,
 					preserveComments: 'all'
 				},
-				src: 'js/*.js',
-				dest:'dist/js/script.min.js'
+				src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/*.js'],
+				dest:'dist/js/basescripts.min.js'
 			}
 		},
+
+		// TASK: CSSMIN
+
+		cssmin: {
+  		options: {
+    		shorthandCompacting: false,
+    		roundingPrecision: -1
+  		},
+  		target: {
+    		files: {
+      		'dist/css/basecss.min.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css', 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css', 'app/css/custombootstrap.css']
+    		}
+  		}
+		},
+
+		// TASK: WATCH -------------------
 
 		watch: {
 			js: {					// rebuild dev script when js files change
@@ -27,6 +46,9 @@ module.exports = function(grunt) {
 				tasks: ['uglify:dev']
 			}
 		},
+
+
+		// TASK: BAKE --------------------
 
     bake: {
       includes: {
@@ -43,12 +65,15 @@ module.exports = function(grunt) {
     }
 	});
 
-	// load plugins
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-bake' );
+	// LOAD PLUGINS
 
-	// register taks
-	grunt.registerTask('default', ['bake:includes', 'uglify:dev']); // most used task = just type grunt
-	grunt.registerTask('dist',    ['bake:includes', 'uglify:dist']);
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-bake' );
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
+	// REGISTER TASKS
+
+	grunt.registerTask('default', ['cssmin', 'bake:includes', 'uglify:dev']); // most used task = just type grunt
+	grunt.registerTask('dist',    ['cssmin', 'bake:includes', 'uglify:dist']);
 };
