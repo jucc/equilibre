@@ -4,11 +4,15 @@ module.exports = function(grunt) {
 
 	var scriptsList = ['bower_components/jquery/dist/jquery.min.js',
 										 'bower_components/bootstrap/dist/js/bootstrap.min.js',
-										 'js/*.js'];
+										 'bower_components/moment/min/moment.min.js',
+										 'bower_components/fullcalendar/dist/fullcalendar.min.js',
+										 'bower_components/fullcalendar/dist/lang/pt-br.js',
+										 'app/js/*.js'];
 
 	var stylesList  = ['bootstrap-custom/css/bootstrap.min.css',
 	                   'bootstrap-custom/css/bootstrap-theme.min.css',
-										 'app/css/custombootstrap.css'];
+										 'bower_components/fullcalendar/dist/fullcalendar.css',
+										 'app/css/*.css'];
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
