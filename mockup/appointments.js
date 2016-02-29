@@ -51,4 +51,4 @@ var mockEventList = [
    start: t4 + 'T07:15:00',
    end: t4 + 'T07:35:00'
  }
- ]
+ ];

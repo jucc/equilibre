@@ -2,19 +2,18 @@ module.exports = function(grunt) {
 
 	// CONFIG TASKS
 
-	var scriptsList = ['bower_components/jquery/dist/jquery.min.js',
-										 'bootstrap-custom/js/bootstrap.min.js',
-										 'bower_components/moment/min/moment.min.js',
-										 'bower_components/fullcalendar/dist/fullcalendar.min.js',
-										 'bower_components/fullcalendar/dist/lang/pt-br.js',
-										 'mockup/*.js',
-										 'app/js/*.js'
-									  ];
+	var vendorScripts = ['bower_components/jquery/dist/jquery.min.js',
+					   'bootstrap-custom/js/bootstrap.min.js',
+					   'bower_components/moment/min/moment.min.js',
+					   'bower_components/fullcalendar/dist/fullcalendar.min.js',
+					   'bower_components/fullcalendar/dist/lang/pt-br.js'];
+ 	var mockScripts = ['mockup/*.js'];
+ 	var appScripts  = ['app/js/*.js'];
 
 	var stylesList  = ['bootstrap-custom/css/bootstrap.min.css',
 	                   'bootstrap-custom/css/bootstrap-theme.min.css',
-										 'bower_components/fullcalendar/dist/fullcalendar.css',
-										 'app/css/*.css'];
+					   'bower_components/fullcalendar/dist/fullcalendar.css',
+					   'app/css/*.css'];
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -23,7 +22,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			dist: { 				   // concatenate all scripts and minify them
-				src: scriptsList,
+				src: vendorScripts.concat(appScripts),
 				dest: 'dist/js/basescripts.min.js'
 			},
 			dev: {					   // concatenate all scripts but keep them readable
@@ -33,7 +32,17 @@ module.exports = function(grunt) {
 					compress: false,
 					preserveComments: 'all'
 				},
-				src: scriptsList,
+				src: vendorScripts.concat(appScripts),
+				dest:'dist/js/basescripts.min.js'
+			},
+			mock: {
+				options: {
+					beautify: true,
+					mangle: false,
+					compress: false,
+					preserveComments: 'all'
+				},
+				src: vendorScripts.concat(mockScripts).concat(appScripts),
 				dest:'dist/js/basescripts.min.js'
 			}
 		},
@@ -58,7 +67,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			js: {
-				files: scriptsList,
+				files: vendorScripts.concat(mockScripts).concat(appScripts),
 				tasks: ['uglify:dev']
 			},
 			css: {
@@ -131,4 +140,5 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['copy:main', 'cssmin', 'bake:includes', 'uglify:dev']); // most used task = just type grunt
 	grunt.registerTask('dist',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:dist']);
+	grunt.registerTask('mock',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:mock']);
 };

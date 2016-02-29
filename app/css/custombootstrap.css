@@ -30,3 +30,8 @@ body {
 #crudform .form .col-xs-8 {
 	padding-left: 0px;
 }
+
+td.text-right button {
+	margin-left: 5px;
+	margin-right: 5px;
+}
