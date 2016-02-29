@@ -1,0 +1,17 @@
+div#calendar {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f7f9f9;
+}
+
+#calendar .fc-toolbar .fc-center h2 {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: #00a095;
+}
+
+#calendar .fc-toolbar button {
+  background-color: transparent;
+  border-color: #00a99d;
+  color: #00a095;
+}
