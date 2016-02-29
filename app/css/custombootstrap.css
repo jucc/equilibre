@@ -15,10 +15,6 @@ body {
 	margin-right: 30px;
 }
 
-#calendar {
-	background-color: #f3f6f5;
-}
-
 .table-hover tbody tr:hover td {
   background-color: #fff9ee;
 }

@@ -3,11 +3,13 @@ module.exports = function(grunt) {
 	// CONFIG TASKS
 
 	var scriptsList = ['bower_components/jquery/dist/jquery.min.js',
-										 'bower_components/bootstrap/dist/js/bootstrap.min.js',
+										 'bootstrap-custom/js/bootstrap.min.js',
 										 'bower_components/moment/min/moment.min.js',
 										 'bower_components/fullcalendar/dist/fullcalendar.min.js',
 										 'bower_components/fullcalendar/dist/lang/pt-br.js',
-										 'app/js/*.js'];
+										 'mockup/*.js',
+										 'app/js/*.js'
+									  ];
 
 	var stylesList  = ['bootstrap-custom/css/bootstrap.min.css',
 	                   'bootstrap-custom/css/bootstrap-theme.min.css',
@@ -55,9 +57,13 @@ module.exports = function(grunt) {
 		// TASK: WATCH -------------------
 
 		watch: {
-			js: {					// rebuild dev script when js files change
-				files: ['app/js/*.js'],
+			js: {
+				files: scriptsList,
 				tasks: ['uglify:dev']
+			},
+			css: {
+				files: stylesList,
+				tasks: ['cssmin']
 			},
 			html: {
 				files: ['app/*.html', 'app/includes/*.html'],

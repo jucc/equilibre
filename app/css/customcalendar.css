@@ -4,14 +4,28 @@ div#calendar {
   background-color: #f7f9f9;
 }
 
+/* original header date is too large and with little space to the buttons */
 #calendar .fc-toolbar .fc-center h2 {
   margin-top: 15px;
-  font-size: 1.3em;
-  color: #00a095;
+  font-size: 1.35em;
+  color: #f7931e;
 }
 
+/* transparent nav buttons with brand's primary colour */
 #calendar .fc-toolbar button {
   background-color: transparent;
   border-color: #00a99d;
   color: #00a095;
+}
+
+/* date headers with brand's second colour */
+#calendar .fc-widget-header {
+  background-color: #f7f9f9;
+  color: #00a095;
+}
+
+/* only holidays will be all day events, no need to waste precious space*/
+#calendar .fc-day-grid .fc-row {
+  min-height: 1.5em;
+  height: 1.5em;
 }
