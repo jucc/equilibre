@@ -27,11 +27,7 @@ body {
 	font-size: 1.2em;
 }
 
-#crudform .form .col-xs-8 {
-	padding-left: 0px;
-}
-
-td.text-right button {
-	margin-left: 5px;
-	margin-right: 5px;
+.text-right button {
+	margin-left: 3px;
+	margin-right: 3px;
 }
