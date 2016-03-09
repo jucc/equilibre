@@ -3,6 +3,7 @@ module.exports = function(grunt) {
    // CONFIG TASKS
 
    var vendorScripts = [
+   	  'bower_components/angular/angular.min.js',
       'bower_components/jquery/dist/jquery.min.js',
       'bootstrap-custom/js/bootstrap.min.js',
       'bower_components/moment/min/moment.min.js',
@@ -128,7 +129,6 @@ module.exports = function(grunt) {
             ]
          }
       }
-
    });
 
 
