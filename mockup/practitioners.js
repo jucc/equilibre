@@ -22,16 +22,19 @@ var practitioners = [
   }
 ];
 
-$.each(practitioners, function(i, pract){ 
-  var tdName     = '<td>' + pract.name + '</td>';
-  var tdProf     = '<td>' + pract.profession + '</td>';
-  var tdPhone    = '<td>' + pract.phone + '</td>';
-  var tdButtons  = '<td class="text-right">'
-      tdButtons += '<button class="btn btn-default btn-xs" aria-label="editar" data-toggle="modal" href="#crudform">';
-      tdButtons += '<span class="glyphicon glyphicon-edit" aria-hidden="true"> </span> </button>';
-      tdButtons += '<button class="btn btn-default btn-xs" aria-label="remover">';
-      tdButtons += '<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span></button></td>';
-  var $tr = $('<tr>' + tdName + tdProf + tdPhone + tdButtons + '</tr>');
-  
-  $('#practitioners').append($tr);
+
+$(document).ready(function() {
+   $.each(practitioners, function(i, pract){
+     var tdName     = '<td>' + pract.name + '</td>';
+     var tdProf     = '<td>' + pract.profession + '</td>';
+     var tdPhone    = '<td>' + pract.phone + '</td>';
+     var tdButtons  = '<td class="text-right">'
+         tdButtons += '<button class="btn btn-default btn-xs" aria-label="editar" data-toggle="modal" href="#crudform">';
+         tdButtons += '<span class="glyphicon glyphicon-edit" aria-hidden="true"> </span> </button>';
+         tdButtons += '<button class="btn btn-default btn-xs" aria-label="remover">';
+         tdButtons += '<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span></button></td>';
+     var $tr = $('<tr>' + tdName + tdProf + tdPhone + tdButtons + '</tr>');
+
+     $('#practitioners').append($tr);
+   });
 });

@@ -3,7 +3,7 @@ module.exports = function(grunt) {
    // CONFIG TASKS
 
    var vendorScripts = [
-   	  'bower_components/angular/angular.min.js',
+   	'bower_components/angular/angular.min.js',
       'bower_components/jquery/dist/jquery.min.js',
       'bootstrap-custom/js/bootstrap.min.js',
       'bower_components/moment/min/moment.min.js',
@@ -144,5 +144,5 @@ module.exports = function(grunt) {
 
    grunt.registerTask('default', ['copy:main', 'cssmin', 'bake:includes', 'uglify:dev']); // most used task = just type grunt
    grunt.registerTask('dist',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:dist']);
-   grunt.registerTask('mock',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:dev']);
+   grunt.registerTask('mock',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:mock']);
 };

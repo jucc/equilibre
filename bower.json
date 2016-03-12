@@ -2,11 +2,11 @@
   "name": "equilibre",
   "version": "0.0.1",
   "dependencies": {
+    "angular": "~1.5.0",
     "jquery": "~2.2.1",
-    "bootstrap": "~3.3.6",
     "moment": "~2.11.2",
     "fullcalendar": "~2.6.1",
-    "angular": "~1.5.0"
+    "angular-bootstrap": "^1.2.4"
   },
   "private": true
 }

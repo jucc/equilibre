@@ -85,18 +85,19 @@ var patients = [
   }
 ];
 
+$(document).ready(function() {
+   $.each(patients, function(i, patient){
 
-$.each(patients, function(i, patient){ 
-  
-  var tdName     = '<td>' + patient.name + '</td>';
-  var tdMail     = '<td>' + patient.email + '</td>';
-  var tdMobile   = '<td>' + patient.mobile + '</td>';
-  var tdButtons  = '<td class="text-right">'
-      tdButtons += '<button class="btn btn-default btn-xs" aria-label="editar" data-toggle="modal" href="#crudform">';
-      tdButtons += '<span class="glyphicon glyphicon-edit" aria-hidden="true"> </span> </button>';
-      tdButtons += '<button class="btn btn-default btn-xs" aria-label="remover">';
-      tdButtons += '<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span></button></td>';
-  var $tr = $('<tr>' + tdName + tdMail + tdMobile + tdButtons + '</tr>');
-  
-  $('#patients').append($tr);
+     var tdName     = '<td>' + patient.name + '</td>';
+     var tdMail     = '<td>' + patient.email + '</td>';
+     var tdMobile   = '<td>' + patient.mobile + '</td>';
+     var tdButtons  = '<td class="text-right">'
+         tdButtons += '<button class="btn btn-default btn-xs" aria-label="editar" data-toggle="modal" href="#crudform">';
+         tdButtons += '<span class="glyphicon glyphicon-edit" aria-hidden="true"> </span> </button>';
+         tdButtons += '<button class="btn btn-default btn-xs" aria-label="remover">';
+         tdButtons += '<span class="glyphicon glyphicon-trash" aria-hidden="true"> </span></button></td>';
+     var $tr = $('<tr>' + tdName + tdMail + tdMobile + tdButtons + '</tr>');
+
+     $('#patients').append($tr);
+   });
 });
