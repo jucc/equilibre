@@ -4,29 +4,47 @@ angular.module("equilibre").controller("navCtrl", function($scope) {
   $scope.navCollapsed = true;
 });
 
+//TODO DRY - there's a lot of repeated code between patients and practitioners
+
 angular.module("equilibre").controller("patientsCtrl", function($scope, dataService) {
 
-  $scope.open = function() {
-    console.log("open");
-  };
-
   dataService.getPatients(function(response) {
-    console.log(response.data);
     $scope.patients = response.data;
   });
+
+  $scope.add = function() {
+   console.log("Adding");
+  };
+
+  $scope.edit = function(patient) {
+   console.log ("Editing " + patient.name);
+  }
+
+  $scope.delete = function(patient, index) {
+   console.log ("Deleting " + patient.name + " - " + index);
+  }
+
 });
 
 
 angular.module("equilibre").controller("practsCtrl", function($scope, dataService) {
 
-  $scope.open = function() {
-    console.log("open");
-  };
-
   dataService.getPractitioners(function(response) {
-    console.log(response.data);
     $scope.practs = response.data;
   });
+
+  $scope.add = function() {
+   console.log("Adding");
+  };
+
+  $scope.edit = function(pract) {
+   console.log ("Editing " + pract.name);
+  }
+
+  $scope.delete = function(pract, index) {
+   console.log ("Deleting " + pract.name + " - " + index);
+  }
+
 });
 
 

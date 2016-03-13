@@ -8,8 +8,6 @@
 
     <eqnavbar></eqnavbar>
 
-    <!-- CONTENT -->
-
     <div class="container" ng-controller="practsCtrl">
 
       <div class="jumbotron">
@@ -30,6 +28,19 @@
             </tr>
           </thead>
           <tbody id="practitioners">
+             <tr ng-repeat="pract in practs">
+                <td> {{pract.name}} </td>
+                <td> {{pract.profession}} </td>
+                <td> {{pract.phone}} </td>
+                <td class="text-right">
+                   <button class="btn btn-default btn-xs" aria-label="editar" ng-click="edit(pract)">
+                      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                   </button>
+                   <button class="btn btn-default btn-xs" aria-label="remover" ng-click="delete(pract, $index)">
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                   </button>
+                </td>
+             </tr>
           </tbody>
         </table>
       </div>
