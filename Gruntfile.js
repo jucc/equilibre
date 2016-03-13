@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       'bower_components/moment/min/moment.min.js',
       'bower_components/fullcalendar/dist/fullcalendar.min.js',
       'bower_components/fullcalendar/dist/lang/pt-br.js'];
-   var mockScripts = ['mockup/*.js'];
+   var mockScripts = ['mock/*.js'];
    var appScripts  = [
       'app/js/app.js',
       'app/js/directives/*.js',
@@ -139,6 +139,15 @@ module.exports = function(grunt) {
                   cwd: 'app/templates/',
                   src: '**',
                   dest: 'dist/templates/'
+               },
+               // mockup json
+               {
+                  expand: true,
+                  flatten: true,
+                  filter: 'isFile',
+                  cwd: 'mock/',
+                  src: '*.json',
+                  dest: 'dist/mock/'
                }
             ]
          }
