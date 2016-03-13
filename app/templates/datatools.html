@@ -1,7 +1,7 @@
-<div class="row datatools">
+<div class="row datatools" ng-controller="PatientsCtrl">
   <div class="col-xs-6">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="buscar" aria-describedby="search-button">
+      <input type="text" class="form-control" placeholder="buscar" aria-describedby="search-button"></input>
       <span class="input-group-addon" id="search-button"> <a href="#"><b class="glyphicon glyphicon-search"> </b></a></span>
     </div>
   </div>
@@ -9,7 +9,7 @@
   </div>
   <div class="col-xs-2">
     <div class="add-button text-right">
-      <button class="btn btn-primary" aria-label="adicionar" data-toggle="modal" href="#crudform">
+      <button class="btn btn-primary" aria-label="adicionar" ng-click="open()">
         <span class="glyphicon glyphicon-plus"> </span>
       </button>
     </div>
