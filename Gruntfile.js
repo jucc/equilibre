@@ -12,7 +12,10 @@ module.exports = function(grunt) {
       'bower_components/fullcalendar/dist/fullcalendar.min.js',
       'bower_components/fullcalendar/dist/lang/pt-br.js'];
    var mockScripts = ['mockup/*.js'];
-   var appScripts  = ['app/js/app.js', 'app/js/customcalendar.js'];
+   var appScripts  = [
+      'app/js/app.js',
+      'app/js/directives/*.js',
+      'app/js/customcalendar.js'];
 
    var stylesList  = [
       'bootstrap-custom/css/bootstrap.min.css',
@@ -127,6 +130,15 @@ module.exports = function(grunt) {
                   cwd: 'app/img/',
                   src: '**',
                   dest: 'dist/img/'
+               },
+               // templates
+               {
+                  expand: true,
+                  flatten: true,
+                  filter: 'isFile',
+                  cwd: 'app/templates/',
+                  src: '**',
+                  dest: 'dist/templates/'
                }
             ]
          }
