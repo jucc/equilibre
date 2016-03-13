@@ -5,6 +5,7 @@ angular.module("equilibre").controller("navCtrl", function($scope) {
 });
 
 angular.module("equilibre").controller("patientsCtrl", function($scope, dataService) {
+
   $scope.open = function() {
     console.log("open");
   };
@@ -14,6 +15,20 @@ angular.module("equilibre").controller("patientsCtrl", function($scope, dataServ
     $scope.patients = response.data;
   });
 });
+
+
+angular.module("equilibre").controller("practsCtrl", function($scope, dataService) {
+
+  $scope.open = function() {
+    console.log("open");
+  };
+
+  dataService.getPractitioners(function(response) {
+    console.log(response.data);
+    $scope.practs = response.data;
+  });
+});
+
 
 angular.module("equilibre").service("dataService", function($http) {
 
