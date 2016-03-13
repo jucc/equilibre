@@ -80,7 +80,7 @@ module.exports = function(grunt) {
             tasks: ['cssmin']
          },
          html: {
-            files: ['app/*.html', 'app/includes/*.html'],
+            files: ['app/*.html', 'app/templates/*.html'],
             tasks: ['bake:includes']
          }
       },
