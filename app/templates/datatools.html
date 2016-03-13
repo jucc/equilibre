@@ -1,8 +1,12 @@
+<!--
+     the controller for this template must be in a container and also
+     control the data table (patients or practs) to be manipulated
+-->
 <div class="row datatools">
   <div class="col-xs-6">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="buscar" aria-describedby="search-button"></input>
-      <span class="input-group-addon" id="search-button"> <a href="#"><b class="glyphicon glyphicon-search"> </b></a></span>
+      <input type="text" ng-model="searchfilter" class="form-control" placeholder="buscar" aria-describedby="search-button"></input>
+      <span class="input-group-addon" id="search-button"><b class="glyphicon glyphicon-search"></b></span>
     </div>
   </div>
   <div class="col-xs-4">

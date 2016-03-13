@@ -7,7 +7,6 @@ module.exports = function(grunt) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/jquery/dist/jquery.min.js',
-      //'bootstrap-custom/js/bootstrap.min.js',
       'bower_components/moment/min/moment.min.js',
       'bower_components/fullcalendar/dist/fullcalendar.min.js',
       'bower_components/fullcalendar/dist/lang/pt-br.js'];

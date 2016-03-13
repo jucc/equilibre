@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody id="practitioners">
-      <tr ng-repeat="pract in practs">
+      <tr ng-repeat="pract in practs | orderBy:'profession' | filter:{name:searchfilter}">
           <td> {{pract.name}} </td>
           <td> {{pract.profession}} </td>
           <td> {{pract.phone}} </td>

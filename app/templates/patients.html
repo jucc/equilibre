@@ -9,7 +9,7 @@
          </tr>
       </thead>
       <tbody id="patients">
-         <tr ng-repeat="patient in patients">
+         <tr ng-repeat="patient in patients | orderBy:'name' | filter:{name:searchfilter}">
             <td> {{patient.name}} </td>
             <td> {{patient.email}} </td>
             <td> {{patient.mobile}} </td>
