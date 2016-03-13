@@ -1,142 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!--(bake /app/templates/head.html)-->
-  </head>
+   <head>
+      <!--(bake /app/templates/head.html)-->
+   </head>
 
-  <body ng-app="equilibre">
+   <body ng-app="equilibre">
 
-    <eqnavbar></eqnavbar>
+      <eqnavbar></eqnavbar>
 
-    <div class="container" ng-controller="practsCtrl">
+      <div class="container">
 
-      <div class="jumbotron">
-        <img class="img-responsive" src="img/logo.png" />
-        <h2> Profissionais </h2>
+         <div class="jumbotron">
+           <img class="img-responsive" src="img/logo.png" />
+           <h2> Profissionais </h2>
+         </div>
+
+         <div ng-controller="practsCtrl">
+            <datatools></datatools>
+            <practitioners></practitioners>
+         </div>
+
+         <foot></foot>
       </div>
-
-      <datatools></datatools>
-
-      <div class="table-responsive" >
-        <table class="table table-striped table-hover">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Especialidade</th>
-              <th>Telefone</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody id="practitioners">
-             <tr ng-repeat="pract in practs">
-                <td> {{pract.name}} </td>
-                <td> {{pract.profession}} </td>
-                <td> {{pract.phone}} </td>
-                <td class="text-right">
-                   <button class="btn btn-default btn-xs" aria-label="editar" ng-click="edit(pract)">
-                      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                   </button>
-                   <button class="btn btn-default btn-xs" aria-label="remover" ng-click="delete(pract, $index)">
-                      <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
-                   </button>
-                </td>
-             </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!--(bake /app/templates/foot.html)-->
-
-    </div>
-
-
-    <!-- MODAL FORM -->
-
-    <div class="modal fade" id="crudform">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title"> Profissional </h4>
-          </div>
-
-          <div class="modal-body">
-            <form class="form-forizontal">
-
-              <div class="form-group">
-                <div>
-                  <label class="control-label" for="profession"> Especialidade </label>
-                </div>
-                <div>
-                  <select class="form-control" id="profession">
-                    <option> Fisioterapeuta </option>
-                    <option> Médico </option>
-                    <option> Nutricionista </option>
-                    <option> Psicólogo </option>
-                  </select>
-                </div>
-              </div>
-
-
-              <div class="form-group">
-                <div>
-                  <label class="control-label" for="room"> Sala </label>
-                </div>
-                <div>
-                  <select class="form-control" id="room">
-                    <option> 1 </option>
-                    <option> 2 </option>
-                    <option> 3 </option>
-                    <option> 4 </option>
-                  </select>
-                </div>
-              </div>
-
-              <hr>
-
-              <div class="form-group"> <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">
-                <b class="glyphicon glyphicon-user" aria-hidden="true"></b> </span>
-                <input type="text" class="form-control" id="name" placeholder="nome" aria-describedby="basic-addon1">
-              </div> </div>
-
-              <div class="form-group"> <div class="input-group">
-                <span class="input-group-addon" id="basic-addon2">
-                <b class="glyphicon glyphicon-earphone" aria-hidden="true"></b> </span>
-                <input type="tel" class="form-control" id="phone" placeholder="telefone" aria-describedby="basic-addon2">
-              </div> </div>
-
-              <div class="form-group"> <div class="input-group">
-                <span class="input-group-addon" id="basic-addon3">@</span>
-                <input type="email" class="form-control" id="email" placeholder="e-mail" aria-describedby="basic-addon3">
-              </div> </div>
-
-<!--               <div class="form-group">
-                <div>
-                  <label class="control-label" for="agreement"> Tipo de contrato </label>
-                </div>
-                <div>
-                  <select class="form-control" id="agreement">
-                    <option> Por hora </option>
-                    <option> Por período (5h) </option>
-                    <option> Por dia </option>
-                    <option> Por mês </option>
-                    <option> % de consultas </option>
-                  </select>
-                </div>
-              </div> -->
-
-              <div class="form-group text-right">
-                <button type="cancel" class="btn btn-default btn-sm" data-dismiss="modal"> Cancelar </button>
-                <button type="submit" class="btn btn-success" data-dismiss="modal"> Salvar </button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </body>
+   </body>
 </html>

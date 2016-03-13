@@ -15,6 +15,7 @@ module.exports = function(grunt) {
    var appScripts  = [
       'app/js/app.js',
       'app/js/directives/*.js',
+      'app/js/controllers/*.js',
       'app/js/customcalendar.js'];
 
    var stylesList  = [
@@ -29,11 +30,11 @@ module.exports = function(grunt) {
       // TASK: UGLIFY --------------
 
       uglify: {
-         dist: { 				   // concatenate all scripts and minify them
+         dist: {              // concatenate all scripts and minify them
             src: vendorScripts.concat(appScripts),
             dest: 'dist/js/basescripts.min.js'
          },
-         dev: {					   // concatenate all scripts but keep them readable
+         dev: {               // concatenate all scripts but keep them readable
             options: {
                beautify: true,
                mangle: false,

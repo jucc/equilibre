@@ -1,0 +1,99 @@
+<div class="modal fade" id="crudform">
+
+   <div class="modal-dialog">
+      <div class="modal-content">
+
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"> Paciente </h4>
+         </div>
+
+         <div class="modal-body">
+            <form class="form">
+
+               <div class="form-group"> <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">
+                  <b class="glyphicon glyphicon-user" aria-hidden="true"></b> </span>
+                  <input type="text" class="form-control" id="name" placeholder="nome" aria-describedby="basic-addon1">
+               </div> </div>
+
+               <div class="form-group"> <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon2">
+                  <b class="glyphicon glyphicon-earphone" aria-hidden="true"></b> </span>
+                  <input type="tel" class="form-control" id="phone" placeholder="telefone" aria-describedby="basic-addon2">
+               </div> </div>
+
+               <div class="form-group"> <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon5">
+                  <b class="glyphicon glyphicon-phone" aria-hidden="true"></b> </span>
+                  <input type="tel" class="form-control" id="mobile" placeholder="celular" aria-describedby="basic-addon5">
+               </div> </div>
+
+               <div class="form-group"> <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon3">@</span>
+                  <input type="email" class="form-control" id="email" placeholder="e-mail" aria-describedby="basic-addon3">
+               </div> </div>
+
+               <div class="row">
+                  <div class="col-xs-8">
+                     <div class="form-group">
+                        <div class="input-group">
+                           <span class="input-group-addon" id="basic-addon4">
+                           <b class="glyphicon glyphicon-calendar" aria-hidden="true"></b> Nascimento </span>
+                           <input type="date" class="form-control" id="birthdate" placeholder="nascimento" aria-describedby="basic-addon4">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-4">
+                     <div class="form-group">
+                        <input type="text" readonly="readonly" class="form-control" id="age" placeholder="idade" aria-describedby="basic-addon4">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="form-group"> <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon6">
+                  <b class="glyphicon glyphicon-bullhorn" aria-hidden="true"></b> </span>
+                  <input type="text" class="form-control" id="reference" placeholder="indicado por" aria-describedby="basic-addon6">
+               </div> </div>
+
+               <hr>
+
+               <div class="panel panel-info">
+                  <div class="panel-heading">
+                     <span class= "panel-title"> Atendimento por [Profissional] </span>
+                  </div>
+                  <div class="panel-body">
+                     <div class="form-group"> <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon7">
+                           <b class="glyphicon glyphicon-calendar" aria-hidden="true"> </b> Última consulta
+                        </span>
+                        <input type="date"class="form-control" readonly="readonly" id="lastappointment"  aria-describedby="basic-addon7">
+                     </div> </div>
+                     <div class="form-group">
+                        <div>
+                           <label class="control-label" for="appvalue"> Valor da consulta </label>
+                        </div>
+                        <div>
+                           <input type="text" class="form-control" id="appvalue" placeholder="0.00">
+                        </div>
+                        <div>
+                           <label class="control-label" for="firstappvalue"> Primeira consulta </label>
+                        </div>
+                        <div>
+                           <input type="text" class="form-control" id="firstappvalue" placeholder="0.00">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="form-group text-right">
+                  <button type="cancel" class="btn btn-default btn-sm" data-dismiss="modal"> Cancelar </button>
+                  <button type="submit" class="btn btn-success" data-dismiss="modal"> Salvar </button>
+               </div>
+            </form>
+         </div>
+
+      </div>
+   </div>
+</div>
