@@ -11,7 +11,7 @@
             <label class="control-label" for="profession"> Especialidade </label>
          </div>
          <div>
-            <select ng-model="practitioner.profession" id="profession" class="form-control" >
+            <select ng-model="person.profession" id="profession" class="form-control" >
                <option></option>
                <option ng-repeat="profession in professions"> {{profession}} </option>
             </select>
@@ -23,7 +23,7 @@
             <label class="control-label" for="room"> Sala </label>
          </div>
          <div>
-            <select ng-model="practitioner.room" id="room" class="form-control" >
+            <select ng-model="person.room" id="room" class="form-control" >
                <option ng-repeat="room in rooms"> {{room}} </option>
             </select>
          </div>
@@ -35,19 +35,19 @@
          <span class="input-group-addon" id="basic-addon1">
             <b class="glyphicon glyphicon-user" aria-hidden="true"></b>
          </span>
-         <input type="text" ng-model="practitioner.name" id="name" class="form-control" placeholder="nome" aria-describedby="basic-addon1">
+         <input type="text" ng-model="person.name" id="name" class="form-control" placeholder="nome" aria-describedby="basic-addon1">
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon2">
             <b class="glyphicon glyphicon-earphone" aria-hidden="true"></b>
          </span>
-         <input type="tel" ng-model="practitioner.phone" id="phone" class="form-control" placeholder="telefone" aria-describedby="basic-addon2">
+         <input type="tel" ng-model="person.phone" id="phone" class="form-control" placeholder="telefone" aria-describedby="basic-addon2">
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon3">@</span>
-         <input type="email" ng-model="practitioner.email" id="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon3">
+         <input type="email" ng-model="person.email" id="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon3">
       </div> </div>
 
       <div class="form-group text-right">

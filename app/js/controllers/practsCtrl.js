@@ -4,11 +4,20 @@ angular.module('equilibre').controller('practsCtrl', function($scope, dataServic
       $scope.practs = response.data;
    });
 
-   $scope.open = function (pract) {
+   $scope.open = function (person) {
+      
       var modalInstance = $uibModal.open({
          animation: true,
          templateUrl: 'templates/modalPractitioner.html',
-         controller: 'modalCtrl'
+         controller: 'modalCtrl',
+         resolve: {
+            person: function() { return person; }
+         }
+      });
+
+      modalInstance.result.then(function (editedPerson) {
+         $scope.edited = editedPerson;
+         console.log(editedPerson.name);
       });
    };
 
