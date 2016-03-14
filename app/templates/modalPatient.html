@@ -9,24 +9,24 @@
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon1">
          <b class="glyphicon glyphicon-user" aria-hidden="true"></b> </span>
-         <input type="text" class="form-control" id="name" placeholder="nome" aria-describedby="basic-addon1">
+         <input type="text" ng-model="patient.name" id="name" class="form-control" aria-describedby="basic-addon1" placeholder="nome" >
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon2">
          <b class="glyphicon glyphicon-earphone" aria-hidden="true"></b> </span>
-         <input type="tel" class="form-control" id="phone" placeholder="telefone" aria-describedby="basic-addon2">
+         <input type="tel" ng-model="patient.phone" id="phone" class="form-control" placeholder="telefone" aria-describedby="basic-addon2">
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon5">
          <b class="glyphicon glyphicon-phone" aria-hidden="true"></b> </span>
-         <input type="tel" class="form-control" id="mobile" placeholder="celular" aria-describedby="basic-addon5">
+         <input type="tel" ng-model="patient.mobile" id="mobile" class="form-control"  placeholder="celular" aria-describedby="basic-addon5">
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon3">@</span>
-         <input type="email" class="form-control" id="email" placeholder="e-mail" aria-describedby="basic-addon3">
+         <input type="email" ng-model="patient.email" id="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon3">
       </div> </div>
 
       <div class="row">
@@ -35,13 +35,13 @@
                <div class="input-group">
                   <span class="input-group-addon" id="basic-addon4">
                   <b class="glyphicon glyphicon-calendar" aria-hidden="true"></b> Nascimento </span>
-                  <input type="date" class="form-control" id="birthdate" placeholder="nascimento" aria-describedby="basic-addon4">
+                  <input type="date" ng-model="patient.birthdate" id="birthdate" class="form-control" placeholder="nascimento" aria-describedby="basic-addon4">
                </div>
             </div>
          </div>
          <div class="col-xs-4">
             <div class="form-group">
-               <input type="text" readonly="readonly" class="form-control" id="age" placeholder="idade" aria-describedby="basic-addon4">
+               <input type="text" readonly="readonly" id="age" class="form-control" placeholder="idade" aria-describedby="basic-addon4">
             </div>
          </div>
       </div>
@@ -49,7 +49,7 @@
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon6">
          <b class="glyphicon glyphicon-bullhorn" aria-hidden="true"></b> </span>
-         <input type="text" class="form-control" id="reference" placeholder="indicado por" aria-describedby="basic-addon6">
+         <input type="text" ng-model="patient.reference" id="reference" class="form-control" placeholder="indicado por" aria-describedby="basic-addon6">
       </div> </div>
 
       <hr>

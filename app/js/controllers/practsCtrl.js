@@ -4,7 +4,7 @@ angular.module('equilibre').controller('practsCtrl', function($scope, dataServic
       $scope.practs = response.data;
    });
 
-   $scope.open = function () {
+   $scope.open = function (pract) {
       var modalInstance = $uibModal.open({
          animation: true,
          templateUrl: 'templates/modalPractitioner.html',
@@ -14,12 +14,12 @@ angular.module('equilibre').controller('practsCtrl', function($scope, dataServic
 
    $scope.add = function() {
       console.log("Adding");
-      $scope.open();
+      $scope.open({});
    };
 
    $scope.edit = function(pract) {
       console.log ("Editing " + pract.name);
-      $scope.open();
+      $scope.open(pract);
    }
 
    $scope.delete = function(pract, index) {
