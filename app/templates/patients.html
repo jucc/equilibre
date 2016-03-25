@@ -8,16 +8,16 @@
             <th>Ações</th>
          </tr>
       </thead>
-      <tbody id="patients">
-         <tr ng-repeat="patient in patients | orderBy:'name' | filter:{name:searchfilter}">
+      <tbody>
+         <tr ng-repeat="patient in people.patients | orderBy:'name' | filter:{name:searchfilter}">
             <td> {{patient.name}} </td>
             <td> {{patient.email}} </td>
             <td> {{patient.mobile}} </td>
             <td class="text-right">
-               <button class="btn btn-default btn-xs" aria-label="editar" ng-click="edit(patient)">
+               <button class="btn btn-default btn-xs" aria-label="editar" ng-click="people.edit(patient)">
                   <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                </button>
-               <button class="btn btn-default btn-xs" aria-label="remover" ng-click="delete(patient, $index)">
+               <button class="btn btn-default btn-xs" aria-label="remover" ng-click="people.delete(patient, $index)">
                   <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
                </button>
             </td>

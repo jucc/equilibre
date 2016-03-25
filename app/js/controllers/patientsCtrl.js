@@ -1,37 +1,40 @@
-angular.module("equilibre").controller("patientsCtrl", function($scope, dataService, $uibModal) {
+angular.module("equilibre").controller("patientsCtrl", function(dataService, $uibModal) {
+
+   var self = this;
 
    dataService.getPatients(function(response) {
-      $scope.patients = response.data;
+      self.patients = response.data;
    });
 
-   $scope.open = function (person) {
+   self.open = function (person) {
 
       var modalInstance = $uibModal.open({
          animation: true,
          templateUrl: 'templates/modalPatient.html',
          controller: 'modalCtrl',
+         controllerAs: 'modal',
          resolve: {
             person: function() { return person; }
          }
       });
 
       modalInstance.result.then(function (editedPerson) {
-         $scope.edited = editedPerson;
+         self.edited = editedPerson;
          console.log(editedPerson.name);
       });
    };
 
-   $scope.add = function() {
+   self.add = function() {
       console.log("Adding");
-      $scope.open({});
+      self.open({});
    };
 
-   $scope.edit = function(patient) {
+   self.edit = function(patient) {
       console.log ("Editing " + patient.name);
-      $scope.open(patient);
+      self.open(patient);
    }
 
-   $scope.delete = function(patient, index) {
+   self.delete = function(patient, index) {
       console.log ("Deleting " + patient.name + " - " + index);
    }
 

@@ -1,5 +1,5 @@
 <div class="modal-header">
-   <button ng-click="cancel();" type="button" class="close" aria-hidden="true">&times;</button>
+   <button ng-click="modal.cancel();" type="button" class="close" aria-hidden="true">&times;</button>
    <h4 class="modal-title"> Paciente </h4>
 </div>
 
@@ -9,24 +9,24 @@
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon1">
          <b class="glyphicon glyphicon-user" aria-hidden="true"></b> </span>
-         <input type="text" ng-model="person.name" id="name" class="form-control" aria-describedby="basic-addon1" placeholder="nome" >
+         <input type="text" ng-model="modal.person.name" id="name" class="form-control" aria-describedby="basic-addon1" placeholder="nome" >
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon2">
          <b class="glyphicon glyphicon-earphone" aria-hidden="true"></b> </span>
-         <input type="tel" ng-model="person.phone" id="phone" class="form-control" placeholder="telefone" aria-describedby="basic-addon2">
+         <input type="tel" ng-model="modal.person.phone" id="phone" class="form-control" placeholder="telefone" aria-describedby="basic-addon2">
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon5">
          <b class="glyphicon glyphicon-phone" aria-hidden="true"></b> </span>
-         <input type="tel" ng-model="person.mobile" id="mobile" class="form-control"  placeholder="celular" aria-describedby="basic-addon5">
+         <input type="tel" ng-model="modal.person.mobile" id="mobile" class="form-control"  placeholder="celular" aria-describedby="basic-addon5">
       </div> </div>
 
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon3">@</span>
-         <input type="email" ng-model="person.email" id="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon3">
+         <input type="email" ng-model="modal.person.email" id="email" class="form-control" placeholder="e-mail" aria-describedby="basic-addon3">
       </div> </div>
 
       <div class="row">
@@ -35,7 +35,7 @@
                <div class="input-group">
                   <span class="input-group-addon" id="basic-addon4">
                   <b class="glyphicon glyphicon-calendar" aria-hidden="true"></b> Nascimento </span>
-                  <input type="date" ng-model="person.birthdate" id="birthdate" class="form-control" placeholder="nascimento" aria-describedby="basic-addon4">
+                  <input type="date" ng-model="modal.person.birthdate" id="birthdate" class="form-control" placeholder="nascimento" aria-describedby="basic-addon4">
                </div>
             </div>
          </div>
@@ -49,7 +49,7 @@
       <div class="form-group"> <div class="input-group">
          <span class="input-group-addon" id="basic-addon6">
          <b class="glyphicon glyphicon-bullhorn" aria-hidden="true"></b> </span>
-         <input type="text" ng-model="person.reference" id="reference" class="form-control" placeholder="indicado por" aria-describedby="basic-addon6">
+         <input type="text" ng-model="modal.person.reference" id="reference" class="form-control" placeholder="indicado por" aria-describedby="basic-addon6">
       </div> </div>
 
       <hr>
@@ -83,8 +83,8 @@
       </div>
 
       <div class="form-group text-right">
-         <button type="cancel" ng-click="cancel();" class="btn btn-default"> Cancelar </button>
-         <button type="submit" ng-click="ok();" class="btn btn-success"> Salvar </button>
+         <button type="cancel" ng-click="modal.cancel();" class="btn btn-default"> Cancelar </button>
+         <button type="submit" ng-click="modal.ok();" class="btn btn-success"> Salvar </button>
       </div>
    </form>
 </div>

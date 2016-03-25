@@ -1,16 +1,18 @@
-angular.module('equilibre').controller('modalCtrl', function ($scope, $uibModalInstance, person) {
+angular.module('equilibre').controller('modalCtrl', function ($uibModalInstance, person) {
 
-   $scope.professions = ['Fisioterapeuta','Médico','Nutricionista','Psicólogo']
-   $scope.rooms = ['1','2','3','4']
+   var self = this;
 
-   $scope.person = person;
+   self.professions = ['Fisioterapeuta','Médico','Nutricionista','Psicólogo']
+   self.rooms = ['1','2','3','4']
 
-   $scope.ok = function () {
+   self.person = person;
+
+   self.ok = function () {
       console.log("OK");
       $uibModalInstance.close(person);
    };
 
-   $scope.cancel = function () {
+   self.cancel = function () {
       console.log("cancel");
       $uibModalInstance.dismiss('cancel');
    };

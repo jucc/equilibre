@@ -9,15 +9,15 @@
       </tr>
     </thead>
     <tbody id="practitioners">
-      <tr ng-repeat="pract in practs | orderBy:'profession' | filter:{name:searchfilter}">
+      <tr ng-repeat="pract in people.practs | orderBy:'profession' | filter:{name:searchfilter}">
           <td> {{pract.name}} </td>
           <td> {{pract.profession}} </td>
           <td> {{pract.phone}} </td>
           <td class="text-right">
-             <button class="btn btn-default btn-xs" aria-label="editar" ng-click="edit(pract);">
+             <button class="btn btn-default btn-xs" aria-label="editar" ng-click="people.edit(pract);">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
              </button>
-             <button class="btn btn-default btn-xs" aria-label="remover" ng-click="delete(pract, $index);">
+             <button class="btn btn-default btn-xs" aria-label="remover" ng-click="people.delete(pract, $index);">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
              </button>
           </td>
