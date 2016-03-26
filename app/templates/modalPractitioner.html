@@ -13,7 +13,7 @@
          <div>
             <select ng-model="modal.person.profession" id="profession" class="form-control" >
                <option></option>
-               <option ng-repeat="profession in modal.professions"> {{profession}} </option>
+               <option ng-repeat="profession in modal.professions" value="{{profession}}" > {{profession}} </option>
             </select>
          </div>
       </div>
@@ -24,7 +24,7 @@
          </div>
          <div>
             <select ng-model="modal.person.room" id="room" class="form-control" >
-               <option ng-repeat="room in modal.rooms"> {{room}} </option>
+               <option ng-repeat="room in modal.rooms" value="{{room}}"> {{room}} </option>
             </select>
          </div>
       </div>
