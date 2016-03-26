@@ -35,13 +35,20 @@
                <div class="input-group">
                   <span class="input-group-addon" id="basic-addon4">
                   <b class="glyphicon glyphicon-calendar" aria-hidden="true"></b> Nascimento </span>
-                  <input type="date" ng-model="modal.person.birthdate" id="birthdate" value={{modal.person.birthdate}} class="form-control" aria-describedby="basic-addon4">
+                  <input type="date" id="birthdate" class="form-control" aria-describedby="basic-addon4" placeholder="YYYY-MM-DD"
+                         ng-model="modal.person.birthdate"
+                         ng-model-options="{ timezone: 'GMT' }"
+                         value={{ modal.person.birthdate  | date: "dd-MM-yyyy" }} >
+                  <!-- timezone conversion required because when reading the date in default GMT-3 angular parses it as if it was the day before -->
                </div>
             </div>
          </div>
          <div class="col-xs-4">
             <div class="form-group">
-               <input type="text" readonly="readonly" id="age" class="form-control" placeholder="idade" aria-describedby="basic-addon4">
+               <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon7"> Idade </span>
+                  <input type="text" readonly="readonly" maxlength="2" ng-model="modal.person.age" id="age" class="form-control" aria-describedby="basic-addon7">
+               </div>
             </div>
          </div>
       </div>

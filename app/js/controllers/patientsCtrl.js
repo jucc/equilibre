@@ -4,6 +4,10 @@ angular.module("equilibre").controller("patientsCtrl", function(dataService, $ui
 
    dataService.getPatients(function(response) {
       self.patients = response.data;
+      self.patients.forEach(function(entry) {
+          entry.birthdate = new Date(entry.birthdate); //naive solution that converts this specific attribute to date
+          entry.age = moment().diff(entry.birthdate, 'years');
+      });
    });
 
    self.open = function (person) {
