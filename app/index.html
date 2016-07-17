@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
-      <!--(bake /app/templates/head.html)-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Espaço Equilibre</title>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lora:400,400italic' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/basecss.min.css" media="screen">
+      <script type="text/javascript" src="js/basescripts.min.js"></script>
+      <base href="/">
    </head>
 
    <body ng-app="equilibre">
@@ -9,26 +15,9 @@
       <eqnavbar></eqnavbar>
 
       <div class="container">
-
-         <div class="jumbotron">
-            <img class="img-responsive" src="img/logo.png" />
-            <h2> Login </h2>
-         </div>
-
-         <form class="form-signin">
-            <label for="inputEmail" class="sr-only"> Usu&aacute;rio </label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="usu&aacute;rio" required autofocus>
-            <label for="inputPassword" class="sr-only"> Senha </label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="senha" required>
-            <div class="checkbox">
-               <label>
-                  <input type="checkbox" value="remember-me"> Lembrar
-               </label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit"> Entrar </button>
-         </form>
-
+         <ui-view></ui-view>
          <foot></foot>
       </div>
+
    </body>
 </html>

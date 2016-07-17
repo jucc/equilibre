@@ -3,9 +3,10 @@ module.exports = function(grunt) {
    // CONFIG TASKS
 
    var vendorScripts = [
-   	'bower_components/angular/angular.js',
+      'bower_components/angular/angular.js',
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/moment/min/moment.min.js',
       'bower_components/fullcalendar/dist/fullcalendar.min.js',
@@ -13,6 +14,7 @@ module.exports = function(grunt) {
    var mockScripts = ['mock/*.js'];
    var appScripts  = [
       'app/js/app.js',
+      'app/js/router.js',
       'app/js/directives/*.js',
       'app/js/controllers/*.js',
       'app/js/customcalendar.js'];
@@ -97,12 +99,12 @@ module.exports = function(grunt) {
                parsePattern: '/\[\{\s?([\.\-\w]*)\s?\}\]/g'
             },
             files: {
-               "dist/admin.html": "app/admin.html",
-               "dist/appointments.html": "app/appointments.html",
-               "dist/index.html": "app/index.html",
-               "dist/patients.html": "app/patients.html",
-               "dist/professionals.html": "app/professionals.html",
-               "dist/rooms.html": "app/rooms.html",
+               // "dist/admin.html": "app/admin.html",
+               // "dist/appointments.html": "app/appointments.html",
+               // "dist/index.html": "app/index.html",
+               // "dist/patients.html": "app/patients.html",
+               // "dist/professionals.html": "app/professionals.html",
+               // "dist/rooms.html": "app/rooms.html",
             }
          },
       },
@@ -130,6 +132,15 @@ module.exports = function(grunt) {
                   cwd: 'app/img/',
                   src: '**',
                   dest: 'dist/img/'
+               },
+               // views
+               {
+                  expand: true,
+                  flatten: true,
+                  filter: 'isFile',
+                  cwd: 'app/view/',
+                  src: ['*.html', '../index.html'],
+                  dest: 'dist'
                },
                // templates
                {
