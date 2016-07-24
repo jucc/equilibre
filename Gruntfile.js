@@ -14,7 +14,6 @@ module.exports = function(grunt) {
    var mockScripts = ['mock/*.js'];
    var appScripts  = [
       'app/js/app.js',
-      'app/js/router.js',
       'app/js/directives/*.js',
       'app/js/controllers/*.js',
       'app/js/customcalendar.js'];
@@ -91,25 +90,6 @@ module.exports = function(grunt) {
       },
 
 
-      // TASK: BAKE --------------------
-
-      bake: {
-         includes: {
-            options: {
-               parsePattern: '/\[\{\s?([\.\-\w]*)\s?\}\]/g'
-            },
-            files: {
-               // "dist/admin.html": "app/admin.html",
-               // "dist/appointments.html": "app/appointments.html",
-               // "dist/index.html": "app/index.html",
-               // "dist/patients.html": "app/patients.html",
-               // "dist/professionals.html": "app/professionals.html",
-               // "dist/rooms.html": "app/rooms.html",
-            }
-         },
-      },
-
-
       // TASK : COPY -------------------
 
       copy: {
@@ -172,11 +152,10 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
    grunt.loadNpmTasks('grunt-contrib-copy');
-   grunt.loadNpmTasks('grunt-bake');
 
    // REGISTER TASKS
 
-   grunt.registerTask('default', ['copy:main', 'cssmin', 'bake:includes', 'uglify:dev']); // most used task = just type grunt
-   grunt.registerTask('dist',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:dist']);
-   grunt.registerTask('mock',    ['copy:main', 'cssmin', 'bake:includes', 'uglify:mock']);
+   grunt.registerTask('default', ['copy:main', 'cssmin', 'uglify:dev']); // most used task = just type grunt
+   grunt.registerTask('dist',    ['copy:main', 'cssmin', 'uglify:dist']);
+   grunt.registerTask('mock',    ['copy:main', 'cssmin', 'uglify:mock']);
 };

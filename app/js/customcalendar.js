@@ -3,6 +3,17 @@
 * TODO turn this into a controller and switch to angular directives
 */
 
+angular.module("equilibre").service("dataService", function($http) {
+
+   this.getPatients = function(successCallback) {
+      $http.get('mock/patients.json').then(successCallback)
+   };
+
+   this.getPractitioners = function(successCallback) {
+      $http.get('mock/practitioners.json').then(successCallback)
+   };
+});
+
 $(document).ready(function()
 {
    $('#calendar').fullCalendar({ // initialize the calendar when the page is ready
