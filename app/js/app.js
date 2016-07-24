@@ -6,7 +6,11 @@ angular.module("equilibre", ['ui.bootstrap', 'ui.router'])
       $stateProvider
          .state('home', {
             url: '/home',
-            templateUrl: 'home.html'
+            templateUrl: 'login.html'
+         })
+         .state('login', {
+            url: '/login',
+            templateUrl: 'login.html'
          })
          .state('admin', {
             url: '/admin',

@@ -14,6 +14,7 @@ angular.module("equilibre").service("dataService", function($http) {
    };
 });
 
+
 $(document).ready(function()
 {
    $('#calendar').fullCalendar({ // initialize the calendar when the page is ready
