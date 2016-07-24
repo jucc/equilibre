@@ -26,17 +26,17 @@
 
             <div class="collapse navbar-collapse" uib-collapse="navCollapsed">
                <ul class="nav navbar-nav navbar-right">
-                  <li> <a href="salas">Salas</a></li>
-                  <li> <a href="consultas">Consultas</a></li>
+                  <li> <a ui-sref="rooms">Salas</a></li>
+                  <li> <a ui-sref="appointments">Consultas</a></li>
                   <li class="dropdown" uib-dropdown>
                      <a href="#" class="dropdown-toggle" uib-dropdown-toggle>Cadastros<b class="caret"></b></a>
                      <ul class="dropdown-menu" uib-dropdown-menu>
-                        <li><a href="profissionais">Profissionais</a></li>
-                        <li><a href="pacientes">Pacientes</a></li>
+                        <li><a ui-sref="practitioners">Profissionais</a></li>
+                        <li><a ui-sref="patients">Pacientes</a></li>
                      </ul>
                   </li>
-                  <li> <a href="admin">Gerenciamento</a></li>
-                  <li> <a href="home">Logout</a></li>
+                  <li> <a ui-sref="admin">Gerenciamento</a></li>
+                  <li> <a ui-sref="login">Logout</a></li>
                </ul>
             </div>
          </div>
