@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
-      <!--(bake /app/templates/head.html)-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Espaço Equilibre</title>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lora:400,400italic' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/basecss.min.css" media="screen">
+      <script type="text/javascript" src="js/basescripts.min.js"></script>
+      <base href="/">
    </head>
 
    <body ng-app="equilibre">
 
-      <eqnavbar></eqnavbar>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand text-muted" href="#"> equilibre </a>
+            </div>
+
+            <div class="collapse navbar-collapse" uib-collapse="navCollapsed">
+               <ul class="nav navbar-nav navbar-right">
+                  <li> <a ui-sref="rooms">Salas</a></li>
+                  <li> <a ui-sref="appointments">Consultas</a></li>
+                  <li class="dropdown" uib-dropdown>
+                     <a href="#" class="dropdown-toggle" uib-dropdown-toggle>Cadastros<b class="caret"></b></a>
+                     <ul class="dropdown-menu" uib-dropdown-menu>
+                        <li><a ui-sref="practitioners">Profissionais</a></li>
+                        <li><a ui-sref="patients">Pacientes</a></li>
+                     </ul>
+                  </li>
+                  <li> <a ui-sref="admin">Gerenciamento</a></li>
+                  <li> <a ui-sref="login">Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
 
       <div class="container">
-
-         <div class="jumbotron">
-            <img class="img-responsive" src="img/logo.png" />
-            <h2> Login </h2>
+         <ui-view></ui-view>
+         <div>
+           <p>&copy; 2016 Equilibre - by jucc </p>
          </div>
-
-         <form class="form-signin">
-            <label for="inputEmail" class="sr-only"> Usu&aacute;rio </label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="usu&aacute;rio" required autofocus>
-            <label for="inputPassword" class="sr-only"> Senha </label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="senha" required>
-            <div class="checkbox">
-               <label>
-                  <input type="checkbox" value="remember-me"> Lembrar
-               </label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit"> Entrar </button>
-         </form>
-
-         <foot></foot>
       </div>
+
    </body>
 </html>

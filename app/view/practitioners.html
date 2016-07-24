@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <img class="img-responsive" src="img/logo.png" />
+  <h2> Profissionais </h2>
+</div>
+
+<div ng-controller="practsCtrl as people">
+   <datatools></datatools>
+   <div class="table-responsive" >
+    <table class="table table-striped table-hover">
+       <thead>
+         <tr>
+           <th>Nome</th>
+           <th>Especialidade</th>
+           <th>Telefone</th>
+           <th>Ações</th>
+         </tr>
+       </thead>
+       <tbody id="practitioners">
+         <tr ng-repeat="pract in people.practs | orderBy:'profession' | filter:{name:searchfilter}">
+             <td> {{pract.name}} </td>
+             <td> {{pract.profession}} </td>
+             <td> {{pract.phone}} </td>
+             <td class="text-right">
+                <button class="btn btn-default btn-xs" aria-label="editar" ng-click="people.edit(pract);">
+                   <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </button>
+                <button class="btn btn-default btn-xs" aria-label="remover" ng-click="people.delete(pract, $index);">
+                   <span class="glyphicon glyphicon-trash" aria-hidden="true"> </span>
+                </button>
+             </td>
+         </tr>
+       </tbody>
+    </table>
+   </div>
+
+</div>

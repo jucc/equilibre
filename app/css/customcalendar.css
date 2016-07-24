@@ -18,7 +18,7 @@ div#calendar {
   color: #00a095;
 }
 
-/* date headers with brand's second colour */
+/* date headers with brand's primary colour */
 #calendar .fc-widget-header {
   background-color: #f7f9f9;
   color: #00a095;
