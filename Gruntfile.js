@@ -9,14 +9,16 @@ module.exports = function(grunt) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/moment/min/moment.min.js',
+      'bower_components/angular-ui-calendar/src/calendar.js',
       'bower_components/fullcalendar/dist/fullcalendar.min.js',
-      'bower_components/fullcalendar/dist/lang/pt-br.js'];
+      'bower_components/fullcalendar/dist/lang/pt-br.js',
+      'bower_components/fullcalendar/dist/gcal.js'
+    ];
    var mockScripts = ['mock/*.js'];
    var appScripts  = [
       'app/js/app.js',
       'app/js/directives/*.js',
-      'app/js/controllers/*.js',
-      'app/js/customcalendar.js'];
+      'app/js/controllers/*.js'];
 
    var stylesList  = [
       'bootstrap-custom/css/bootstrap.min.css',
